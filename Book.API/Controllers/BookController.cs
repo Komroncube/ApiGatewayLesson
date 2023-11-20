@@ -28,7 +28,7 @@ namespace Book.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [HttpPut]
+        [HttpPut("{id}")]
         public async ValueTask<IActionResult> UpdateBook(int id, BookDto updateBook)
         {
             try
@@ -48,7 +48,7 @@ namespace Book.API.Controllers
                 return BadRequest(ex.Message);
             }
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async ValueTask<IActionResult> DeleteBook(int id)
         {
             try
