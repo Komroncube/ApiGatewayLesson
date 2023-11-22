@@ -1,18 +1,7 @@
 {
   "Routes": [
-    {
-      //bookAPI
-      "DownstreamPathTemplate": "/api/Book/GetBooks",
-      "DownstreamScheme": "https",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 7043
-        }
-      ],
-      "UpstreamPathTemplate": "/getbooks",
-      "UpstreamHttpMethod": [ "GET" ]
-    },
+    //bookAPI
+
     {
       "DownstreamPathTemplate": "/api/Book/UpdateBook{id}",
       "DownstreamScheme": "https",
@@ -22,7 +11,7 @@
           "Port": 7043
         }
       ],
-      "UpstreamPathTemplate": "/updatebook",
+      "UpstreamPathTemplate": "/updatebook{id}",
       "UpstreamHttpMethod": [ "PUT" ]
     },
     {
@@ -36,6 +25,18 @@
       ],
       "UpstreamPathTemplate": "/deletebook{id}",
       "UpstreamHttpMethod": [ "DELETE" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Book/GetBooks",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7043
+        }
+      ],
+      "UpstreamPathTemplate": "/getbooks",
+      "UpstreamHttpMethod": [ "GET" ]
     },
     //employeeAPI
     {
